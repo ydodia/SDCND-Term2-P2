@@ -10,11 +10,12 @@
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
-class UKF {
+class UKF
+{
 public:
 
   ///* initially set to false, set to true in first call of ProcessMeasurement
-  bool is_initialized_;
+  bool is_initialized_ = false;
 
   ///* if this is false, laser measurements will be ignored (except for init)
   bool use_laser_;
@@ -27,6 +28,8 @@ public:
 
   ///* state covariance matrix
   MatrixXd P_;
+  MatrixXd P_aug_;
+  MatrixXd Q_;
 
   ///* predicted sigma points matrix
   MatrixXd Xsig_pred_;
@@ -63,6 +66,7 @@ public:
 
   ///* Augmented state dimension
   int n_aug_;
+  int n_col_aug_;
 
   ///* Sigma point spreading parameter
   double lambda_;
