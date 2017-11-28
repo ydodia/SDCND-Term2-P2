@@ -20,6 +20,7 @@ Y  : 0.0835
 Vx : 0.3367
 Vy : 0.2229 .
 `
+
 As reference, this is an improvement upon the EKF from P1:
 
 `
