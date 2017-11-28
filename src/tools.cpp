@@ -23,6 +23,5 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
 	}
 	rmse /= n;
 	rmse = rmse.array().sqrt();
-	std::cerr << rmse << std::endl;
 	return rmse;
 }
